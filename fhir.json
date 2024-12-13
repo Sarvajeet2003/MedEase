@@ -1,0 +1,223 @@
+[{
+        "resourceType": "Patient",
+        "id": "2",
+        "name": [{
+            "use": "official",
+            "family": "Smith",
+            "given": ["Alice"]
+        }],
+        "gender": "female",
+        "birthDate": "1992-01-01"
+    },
+    {
+        "resourceType": "Observation",
+        "id": "2-a1c",
+        "status": "final",
+        "category": [{
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+            }]
+        }],
+        "code": {
+            "coding": [{
+                "system": "http://loinc.org",
+                "code": "4548-4",
+                "display": "Hemoglobin A1c"
+            }]
+        },
+        "subject": {
+            "reference": "Patient/2"
+        },
+        "valueCodeableConcept": {
+            "text": "Abnormal"
+        }
+    },
+    {
+        "resourceType": "Encounter",
+        "id": "2-encounter",
+        "status": "finished",
+        "class": {
+            "code": "inpatient"
+        },
+        "subject": {
+            "reference": "Patient/2"
+        },
+        "reasonCode": [{
+            "text": "Diagnosis code 0"
+        }],
+        "extension": [{
+                "url": "http://example.org/fhir/structuredefinition/labProcedures",
+                "valueInteger": 81
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/medications",
+                "valueInteger": 10
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/outpatientVisits",
+                "valueInteger": 4
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/inpatientVisits",
+                "valueInteger": 4
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/emergencyVisits",
+                "valueInteger": 1
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/diagnosesCount",
+                "valueInteger": 6
+            }
+        ]
+    },
+    {
+        "resourceType": "Patient",
+        "id": "3",
+        "name": [{
+            "use": "official",
+            "family": "Brown",
+            "given": ["Ethan"]
+        }],
+        "gender": "male",
+        "birthDate": "1946-01-01"
+    },
+    {
+        "resourceType": "Observation",
+        "id": "3-a1c",
+        "status": "final",
+        "category": [{
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+            }]
+        }],
+        "code": {
+            "coding": [{
+                "system": "http://loinc.org",
+                "code": "4548-4",
+                "display": "Hemoglobin A1c"
+            }]
+        },
+        "subject": {
+            "reference": "Patient/3"
+        },
+        "valueCodeableConcept": {
+            "text": "Normal"
+        }
+    },
+    {
+        "resourceType": "Encounter",
+        "id": "3-encounter",
+        "status": "finished",
+        "class": {
+            "code": "inpatient"
+        },
+        "subject": {
+            "reference": "Patient/3"
+        },
+        "reasonCode": [{
+            "text": "Diagnosis code 1"
+        }],
+        "extension": [{
+                "url": "http://example.org/fhir/structuredefinition/labProcedures",
+                "valueInteger": 75
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/medications",
+                "valueInteger": 29
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/outpatientVisits",
+                "valueInteger": 4
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/inpatientVisits",
+                "valueInteger": 0
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/emergencyVisits",
+                "valueInteger": 3
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/diagnosesCount",
+                "valueInteger": 5
+            }
+        ]
+    },
+    {
+        "resourceType": "Patient",
+        "id": "4",
+        "name": [{
+            "use": "official",
+            "family": "Williams",
+            "given": ["Emma"]
+        }],
+        "gender": "female",
+        "birthDate": "1986-01-01"
+    },
+    {
+        "resourceType": "Observation",
+        "id": "4-a1c",
+        "status": "final",
+        "category": [{
+            "coding": [{
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+            }]
+        }],
+        "code": {
+            "coding": [{
+                "system": "http://loinc.org",
+                "code": "4548-4",
+                "display": "Hemoglobin A1c"
+            }]
+        },
+        "subject": {
+            "reference": "Patient/4"
+        },
+        "valueCodeableConcept": {
+            "text": "Abnormal"
+        }
+    },
+    {
+        "resourceType": "Encounter",
+        "id": "4-encounter",
+        "status": "finished",
+        "class": {
+            "code": "outpatient"
+        },
+        "subject": {
+            "reference": "Patient/4"
+        },
+        "reasonCode": [{
+            "text": "Diagnosis code 0"
+        }],
+        "extension": [{
+                "url": "http://example.org/fhir/structuredefinition/labProcedures",
+                "valueInteger": 77
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/medications",
+                "valueInteger": 11
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/outpatientVisits",
+                "valueInteger": 2
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/inpatientVisits",
+                "valueInteger": 3
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/emergencyVisits",
+                "valueInteger": 4
+            },
+            {
+                "url": "http://example.org/fhir/structuredefinition/diagnosesCount",
+                "valueInteger": 9
+            }
+        ]
+    }
+]
